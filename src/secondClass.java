@@ -30,5 +30,7 @@ public class secondClass {
         System.out.println("Step 6!");
         WebElement addtocart = locator.findElement(By.xpath("div//a[@class=\"button ajax_add_to_cart_button btn btn-default\"]"));
         addtocart.click();
+        Thread.sleep(5000);
+        driver.close();
     }
 }
