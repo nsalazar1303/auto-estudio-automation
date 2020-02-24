@@ -30,7 +30,28 @@ public class secondClass {
         System.out.println("Step 6!");
         WebElement addtocart = locator.findElement(By.xpath("div//a[@class=\"button ajax_add_to_cart_button btn btn-default\"]"));
         addtocart.click();
+        System.out.println("Step 7!");
         Thread.sleep(5000);
+        WebElement continueshopping= driver.findElement(By.xpath("//span[contains(@class,\"continue\")]"));
+        continueshopping.click();
+        System.out.println("Step 8!");
+        Thread.sleep(5000);
+        WebElement linkbestseller= driver.findElement(By.xpath("//a[@class=\"blockbestsellers\"]"));
+        linkbestseller.click();
+        Thread.sleep(5000);
+        WebElement bestsallersadd = driver.findElement(By.xpath("//ul[@id=\"blockbestsellers\"]//li[contains(@class,\"ajax_block_product\")][2]"));
+        Thread.sleep(5000);
+        over.moveToElement(bestsallersadd).perform();
+        Thread.sleep(5000);
+        System.out.println("Step 9!");
+        WebElement bestsellersaddtocart = bestsallersadd.findElement(By.xpath("div//a[@title=\"Add to cart\"]"));
+        System.out.println("Step 10!");
+        Thread.sleep(5000);
+        bestsellersaddtocart.click();
+        System.out.println("Step 11!");
+        Thread.sleep(5000);
+
         driver.close();
+
     }
 }
